@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>YourNameHere</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="final_4.js"></script>
+	<script src="CCapture.all.min.js"></script>
+	<script src="js/gif.worker.js"></script>
+
+	<style>
+		h1 {
+		  color: black;
+		  font-family: verdana;
+		  font-size: 100%;
+		}
+		li  {
+		  color: black;
+		  font-family: verdana;
+		  font-size: 80%;
+		}
+	</style>
+
+	<script>
+		var capturer = new CCapture( {
+		framerate: 4,
+		format: 'webm',
+		workersPath: './js/',
+		verbose: true,
+		name: "yournamehere"
+		} );
+
+	</script>
+
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+	</style>
+</head>
+
+
+<body>
+
+	<h1>Criss-coss Design Directions</h1>
+	<p>
+		<ul>
+			<li>Use your keyboard to enter your name (Note: Use backspace to delete keys)</li>
+			<li>Use the up and down arrow to change the text size</li>
+			<li>Refresh the page to get a different color background</li>
+			<li>Click the save png button to download a PNG of your name art.</li>
+			<li>Click the download video button to download of your name art. </li>
+		</ul>
+	</p>
+
+	<h1>Criss-coss Design Canvas</h1>
+
+	<button name = "Download_png_button" onclick="save_photo()"> Download PNG </button>
+	<button name = "Download_video_button" onclick="save_video()"> Download Video </button>
+
+</body>
+</html>
